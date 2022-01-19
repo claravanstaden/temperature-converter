@@ -6,13 +6,16 @@ fn main() {
     println!("1 celsius");
     println!("2 fahrenheit");
 
-
     let celsius_or_fahrenheit = get_temperature_unit();
 
     println!("Nice! Now provide the temperature you want to convert.");
 
     let original_temperature = get_original_temperature();
 
+    convert_temperature(celsius_or_fahrenheit, original_temperature);
+}
+
+fn convert_temperature(celsius_or_fahrenheit: i8, original_temperature: f32) {
     if celsius_or_fahrenheit == 1 {
         println!("{}C is {}F", original_temperature, celsius_to_fahrenheit(original_temperature));
         return;
